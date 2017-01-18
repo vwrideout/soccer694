@@ -4,9 +4,11 @@ from datetime import datetime
 from pyspark.sql.types import *
 from pyspark.sql import SQLContext
 
+#player_file and attributes_file will need to be changed to S3 when we have the data properly loaded.
+
 app_name = "i_dunno"
-player_file = "soccer/Player.csv"
-attributes_file = "soccer/Player_Attributes.csv"
+player_file = "data/Player.csv"
+attributes_file = "data/Player_Attributes.csv"
 
 conf = SparkConf().setMaster("local").setAppName(app_name)
 sc = SparkContext(conf = conf)
