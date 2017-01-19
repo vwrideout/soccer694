@@ -5,6 +5,8 @@ Run spark-submit final_table_setup.py to create and join desired dataframes and 
 After table created you can use sqlContext.sql(<SQL STATEMENT>) to query Players table using SQL commands, which returns query results
 as Spark DataFrame (see table_query notebook for example).
 
+When running on cluster, be sure to swap out comments on final_table_setup.py to get csv's from s3.
+
 Players Table Schema:
 
 
