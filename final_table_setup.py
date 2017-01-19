@@ -6,8 +6,12 @@ from pyspark.sql.types import *
 from pyspark.sql import SQLContext
 
 app_name = "i_dunno"
+
+#switch to S3 when on EMR cluster
 player_file = "data/Player.csv"
 attributes_file = "data/Player_Attributes.csv"
+#player_file = "s3n://msan694group/soccer/Player.csv"
+#attributes_file = "s3n://msan694group/soccer/Player_Attributes.csv"
 
 conf = SparkConf().setMaster("local").setAppName(app_name)
 sc = SparkContext(conf = conf)
